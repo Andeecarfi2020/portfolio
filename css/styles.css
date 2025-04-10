@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes y colores globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Colores corporativos */
+:root {
+    --primary-color: #00d1b2;
+    --secondary-color: #00d1b2;
+    --accent-color: #f4f4f9;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    padding: 1rem;
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('../img/heroback.png') no-repeat center center/cover;
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content span {
+    color: var(--secondary-color);
+}
+
+.hero-content p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.btn {
+    background: var(--secondary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+#about, #portfolio {
+    background: var(--accent-color);
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.portfolio-grid img {
+
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.about-container {
+    max-width: 5600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.slogan {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
